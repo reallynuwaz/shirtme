@@ -1,0 +1,26 @@
+# รันทั้งระบบ: docker compose up -d --build
+# Caddy ออกใบรับรอง HTTPS (Let's Encrypt) ให้โดเมนอัตโนมัติ
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      TRUST_PROXY: "1"
+    volumes:
+      - shirtme-data:/data
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    environment:
+      DOMAIN: ${DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on: [app]
+volumes:
+  shirtme-data:
+  caddy-data:
+  caddy-config:

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHIRTME</title>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;600&family=Prompt:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="index.html">SHIRTME</a>
+  <nav>
+    <a href="products.html">สินค้า</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+    <a href="contact.html">ติดต่อ</a>
+  </nav>
+</header>
+
+<!-- พื้นหลังเลื่อน: ใส่รูปที่ script.js (BG_IMAGES) -->
+<section class="hero">
+  <div class="bg-stack" id="bgStack"></div>
+  <div class="hero-text">
+    <h1>SHIRTME</h1>
+    <p>เสื้อยืดสวยๆ ราคาเริ่มต้น 40 บาท</p>
+    <a class="btn" href="products.html">ดูสินค้า</a>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="products-head">
+    <h2>สินค้าทั้งหมด</h2>
+    <div class="arrows">
+      <button id="prev" aria-label="เลื่อนไปทางซ้าย">‹</button>
+      <button id="next" aria-label="เลื่อนไปทางขวา">›</button>
+    </div>
+  </div>
+
+  <!-- การ์ดหมวดสินค้าสร้างจาก data.js (กดเข้าไปดูสินค้าในหมวดได้) -->
+  <div class="slider" id="slider"></div>
+</section>
+
+<footer>SHIRTME © 2026</footer>
+
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

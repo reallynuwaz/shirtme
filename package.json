@@ -1,0 +1,12 @@
+{
+  "name": "shirtme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SHIRTME - เว็บร้านเสื้อยืด (frontend + backend + แอดมิน) ไม่มี dependency ภายนอก",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "dev": "node --no-warnings --watch server.js"
+  },
+  "engines": { "node": ">=22.13" }
+}

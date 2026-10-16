@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ติดต่อ | SHIRTME</title>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;600&family=Prompt:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top solid">
+  <a class="logo" href="index.html">SHIRTME</a>
+  <nav>
+    <a href="products.html">สินค้า</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+    <a href="contact.html" class="active">ติดต่อ</a>
+  </nav>
+</header>
+
+<main class="page narrow">
+  <h1>ติดต่อ</h1>
+  <div class="info" id="contactInfo"></div>
+
+  <h2 class="form-title">ส่งข้อความถึงร้าน</h2>
+  <form class="msg-form" id="msgForm" novalidate>
+    <label>ชื่อ<input name="name" maxlength="100" required autocomplete="name"></label>
+    <label>เบอร์โทร / LINE / อีเมล (ให้ร้านติดต่อกลับ)<input name="contact" maxlength="150" required></label>
+    <label>ข้อความ<textarea name="body" rows="5" maxlength="2000" required></textarea></label>
+    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn" type="submit">ส่งข้อความ</button>
+    <p class="form-status" id="formStatus" role="status"></p>
+  </form>
+</main>
+<footer>SHIRTME © 2026</footer>
+<script src="site.js"></script>
+</body>
+</html>
